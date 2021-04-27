@@ -14,6 +14,10 @@ function Weather() {
                         getWeather(zip: ${zip}){
                             temperature
                             description
+                            temp_max
+                            temp_min
+                            feels_like
+                            humidity
                         }
                     }
                 `
@@ -25,7 +29,7 @@ function Weather() {
     }
   return (
     <div className="Weather">
-        {weather ? <h1>{weather.data.getWeather.temperature}</h1>: null}
+
       <form onSubmit={(e) => {
           e.preventDefault()
           getWeather()
@@ -37,6 +41,12 @@ function Weather() {
           />
 
           <button type="submit">Submit</button>
+        {weather ? <h1>{weather.data.getWeather.temperature}</h1>: null}
+        {weather ? <h1>{weather.data.getWeather.description}</h1>: null}
+        {weather ? <h1>Humidity: {weather.data.getWeather.humidity}</h1>: null}
+        {weather ? <h1>Lows: {weather.data.getWeather.temp_min}</h1>: null}
+        {weather ? <h1>Highs: {weather.data.getWeather.temp_max}</h1>: null}
+        {weather ? <h1>Feels Like: {weather.data.getWeather.feels_like}</h1>: null}
       </form>
     </div>
   );
