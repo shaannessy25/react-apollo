@@ -1,38 +1,87 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 .App {
+  background-image: url("https://i.pinimg.com/originals/6d/5c/de/6d5cde4f5ccd6ddeba2fd84339350e21.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+
+}
+
+.Weather{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 2fr;
+}
+
+.Weather > form{
+  justify-self: center;
+  align-self: center;
+}
+
+.Title{
+  justify-self: center;
+  color: #fff;
+  font-size: 36pt;
+  margin: 5px;
+}
+
+input{
+  width: 100%;
+  font-size: 14pt;
   text-align: center;
+  border-radius: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* input:focus{
+  border-color: red;
+} */
+
+button {
+  width: 100%;
+  margin-top: 5px;
+  background-color: cornflowerblue;
+  color: #fff;
+  font-size: 14pt;
+  transition: 400ms;
+  border-radius: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+button:hover{
+  color: cornflowerblue;
+  background-color: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.Info{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  color: #EF6351;
+  justify-self: center;
+  text-align: center;
+  padding: 10px;
+  font-weight: bolder;
+
 }
 
-.App-link {
-  color: #61dafb;
+.Temperature {
+  padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Temperature > h1 {
+  margin: 5px;
+}
+
+.Description {
+  padding: 10px;
+}
+
+.Description > h1 {
+  margin: 5px;
 }
