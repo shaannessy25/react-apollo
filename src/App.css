@@ -37,9 +37,20 @@ input{
   border-radius: 10px;
 }
 
-/* input:focus{
-  border-color: red;
-} */
+label {
+  /* float: left;
+  clear: none; */
+  display: flex;
+  padding: 0px 1em 0px 8px;
+  color: #fff;
+  font-size: 20pt;
+}
+
+input[type=radio],
+input.radio {
+
+}
+
 
 button {
   width: 100%;
@@ -50,6 +61,7 @@ button {
   transition: 400ms;
   border-radius: 10px;
 }
+
 
 
 button:hover{
