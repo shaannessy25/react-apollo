@@ -19,12 +19,14 @@ function Weather() {
                             temp_min
                             feels_like
                             humidity
+                            cod
                         }
                     }
                 `,
       });
       setWeather(json);
     } catch (err) {
+      alert(err.message)
       console.log(err.message);
     }
   }
